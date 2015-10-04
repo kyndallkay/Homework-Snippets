@@ -1,0 +1,24 @@
+body {
+    background-color: #cccccc;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+header img {
+    display: block;
+    width: 300px;
+    margin: 50px auto 0;
+}
+
+h1 {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    color: rebeccapurple;
+    text-align: center;
+    margin-bottom: 50px;
+}
