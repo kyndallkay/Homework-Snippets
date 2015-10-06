@@ -19,7 +19,7 @@ body,html{
 }
 
 .locomotive {
-    display: inline;
+    display: inline-block;
 }
 
 .train-car1, .train-car2 {
@@ -30,19 +30,13 @@ body,html{
 .track {
     background: url(images/train-track-pattern.png) repeat-x;
     height: 28px;
+    width: 100%;
     position: absolute;
     bottom: 30px;
-    width: 100%;
 }
 
-/*
+
 @media screen and (min-width: 700px){
     
-    .train {
-    max-width: 100%;
-    max-height: auto;
-    }
-    
-    
-    
-}*/
+
+}
