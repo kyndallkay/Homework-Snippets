@@ -1,41 +1,19 @@
-var prices = [25.99, 12.87, 87.99, 21.99, 4.56];
+var prices = [2.99, 5.99, 20.99, 4.99, 13.99];
+var taxRate = 0.075;
+var total = 0;
+var subtotal = 0;
+var grandtotal = 0;
 
-var taxRate = 7;
+calculateSubtotal(prices);
 
-function writeList(list) {
+function calculateSubtotal(list) {
     for (i = 0; i < list.length; i++) {
         document.write("<p>$" + list[i] + "</p>");
+        subtotal = list[i] + subtotal;
     }
+        document.write("<p>Subtotal $" + subtotal + "</p>");
+        calTax = subtotal*taxRate;
+        document.write("<p>Tax $" + calTax.toFixed(2) + "</p>");
+        grandTotal = subtotal+calTax;
+        document.write("<p>Grand Total $" + grandTotal.toFixed(2) + "</p>");
 }
-
-writeList(prices);
-
-function calculateSubTotal(list) {
-  var total = 0;
-  for (i = 0; i < list.length; i++) {
-      total+=list[i];
-}
-  total = total.toFixed(2);   
-  document.write("<p>Sub Total: $"+total+"</p>");
-  return(total);
-}
-var sub = calculateSubTotal(prices);
-
-
-function calculateTax(subTotal) {
-  var total = subTotal*taxRate/100;
-  total = total.toFixed(2);
-  document.write("<p>Tax: $"+total+"</p>");
-  return(total);
-}
-var tax = calculateTax(sub);
-
-function finalTotal(subTotal,tax) {
-  var total = parseFloat(subTotal)+parseFloat(tax);
-  total = total.toFixed(2);
-  document.write("<p>Total: $"+total+"</p>");
-  return(total);
-}
-finalTotal(sub,tax);
-
-
